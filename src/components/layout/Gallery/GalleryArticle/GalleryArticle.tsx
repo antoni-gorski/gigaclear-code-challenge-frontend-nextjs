@@ -9,6 +9,7 @@ export interface GalleryArticleProps {
 
 export const GalleryArticle: React.FC<GalleryArticleProps> = (props) => {
   const {article} = props;
+  const date = (new Date(article.timestamp)).toDateString();
 
   return <div className={styles.galleryArticle}>
     <div className={styles.backgroundImage} style={{backgroundImage: `url(${article.image})`}}/>
@@ -18,9 +19,10 @@ export const GalleryArticle: React.FC<GalleryArticleProps> = (props) => {
         <Tag title={article.topic}/>
         <Tag title={article.user}/>
         <span className='flex'/>
-        <Tag title={(new Date(article.timestamp)).toDateString()}/>
+        <Tag className={styles.topDate} title={date}/>
       </div>
       <p className={styles.description}>{article.description}</p>
+      <p className={styles.bottomDate}>{date}</p>
     </div>
   </div>
 }
