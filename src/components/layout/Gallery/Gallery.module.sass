@@ -1,1 +1,11 @@
 .gallery
+  display: grid
+  grid-template-columns: auto
+  gap: 10px
+  margin: 10px 0
+
+  @media only screen and (min-width: 800px)
+    grid-template-columns: auto auto
+
+  @media only screen and (min-width: 1200px)
+    grid-template-columns: auto auto auto
