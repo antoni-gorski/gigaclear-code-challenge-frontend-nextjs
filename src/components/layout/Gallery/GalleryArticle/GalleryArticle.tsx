@@ -1,10 +1,6 @@
 import React, { ReactNode } from 'react';
 import styles from './GalleryArticle.module.sass'
-
-export type Article = {
-  id: number;
-  title: string;
-};
+import { Article } from 'src/types/article.type';
 
 export interface GalleryArticleProps {
   article: Article;
