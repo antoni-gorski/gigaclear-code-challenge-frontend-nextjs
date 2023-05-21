@@ -1,10 +1,10 @@
 import { Gallery } from "src/components/layout/Gallery/Gallery";
 import { Layout } from "../components/layout";
 import { GalleryArticle } from "src/components/layout/Gallery/GalleryArticle/GalleryArticle";
-import { getArticles } from "src/hooks/get-articles";
+import { useArticles } from "src/hooks/use-articles";
 
-export default async function Home() {
-  const articles = await getArticles();
+export default function Home() {
+  const articles = useArticles();
 
   return (
     <Layout>
