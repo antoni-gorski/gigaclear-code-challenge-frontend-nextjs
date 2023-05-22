@@ -11,7 +11,7 @@ export const GalleryArticle: React.FC<GalleryArticleProps> = (props) => {
   const {article} = props;
   const date = (new Date(article.timestamp)).toDateString();
 
-  return <div className={styles.galleryArticle}>
+  return <div className={styles.galleryArticle} data-testid="gallery-article">
     <div className={styles.backgroundImage} style={{backgroundImage: `url(${article.image})`}}/>
     <div className={styles.content}>
       <h2 className={styles.title}>{article.title}</h2>
