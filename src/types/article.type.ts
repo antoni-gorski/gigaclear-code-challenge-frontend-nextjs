@@ -6,4 +6,6 @@ export type Article = {
   user: string;
   description: string;
   image: string;
+  location: string;
+  price: string;
 };
