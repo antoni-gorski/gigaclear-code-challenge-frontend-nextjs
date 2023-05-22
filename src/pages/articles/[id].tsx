@@ -3,6 +3,7 @@ import { Layout } from "../../components/layout";
 import styles from './[id].module.sass'
 import { useArticle } from "src/hooks/use-article";
 import ReactMarkdown from 'react-markdown'
+import { Button } from "@/atoms/Button";
 
 export default function Article() {
   const router = useRouter();
@@ -28,7 +29,7 @@ export default function Article() {
             </div>
           </div>
           <div>
-            <button className={styles.signUpButton}>Sign up to this event</button>
+            <Button title="Sign up to this event"/>
           </div>
         </div>
         <div className={styles.content}>
