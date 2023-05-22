@@ -8,4 +8,5 @@ export type Article = {
   image: string;
   location: string;
   price: string;
+  content: string;
 };

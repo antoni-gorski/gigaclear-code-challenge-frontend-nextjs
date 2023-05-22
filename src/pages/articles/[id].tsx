@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { Layout } from "../../components/layout";
 import styles from './[id].module.sass'
 import { useArticle } from "src/hooks/use-article";
+import ReactMarkdown from 'react-markdown'
 
 export default function Article() {
   const router = useRouter();
@@ -31,7 +32,7 @@ export default function Article() {
           </div>
         </div>
         <div className={styles.content}>
-          TODO: Content with MD
+          <ReactMarkdown>{article.content}</ReactMarkdown>
         </div>
       </> : <>
         <h1>There is no article like that</h1>
