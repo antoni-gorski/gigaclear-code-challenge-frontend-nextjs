@@ -11,7 +11,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <>
       <Header/>
-      <div className={styles.background} style={{backgroundImage: 'url("assets/Vector 65.png")'}}>
+      <div className={styles.background} style={{backgroundImage: 'url("/assets/Vector 65.png")'}}>
         <Main>
           {children}
         </Main>

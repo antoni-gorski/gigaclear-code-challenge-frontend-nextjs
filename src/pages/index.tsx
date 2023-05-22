@@ -3,6 +3,7 @@ import { Layout } from "../components/layout";
 import { GalleryArticle } from "src/components/layout/Gallery/GalleryArticle/GalleryArticle";
 import { useArticles } from "src/hooks/use-articles";
 import styles from './index.module.sass'
+import Link from "next/link";
 
 export default function Home() {
   const articles = useArticles();
@@ -14,7 +15,9 @@ export default function Home() {
       <Gallery>
         {articles.map((article) => {
           return (
-            <GalleryArticle key={article.id} article={article}/>
+            <Link href={`/articles/${article.id}`} key={article.id}>
+              <GalleryArticle article={article}/>
+            </Link>
           );
         })}
       </Gallery>
