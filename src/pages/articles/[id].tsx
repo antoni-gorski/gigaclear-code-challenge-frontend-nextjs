@@ -12,22 +12,22 @@ export default function Article() {
   return (
     <Layout>
       {article ? <>
-        <h1>{article.title}</h1>
-        <p>{article.description}</p>
-        <p>{date?.toDateString()}</p>
+        <h1 className={styles.title}>{article.title}</h1>
+        <p className={styles.description}>{article.description}</p>
+        <p className={styles.dateTop}>{date?.toDateString()}</p>
         <div className={styles.backgroundImage} style={{backgroundImage: `url(${article.image})`}}/>
         <div className={styles.imageBar}>
-          <div className={styles.left}>
-            <div className={styles.top}>
-              <p>{article.location}</p>
+          <div>
+            <div>
+              <p className={styles.location}>{article.location}</p>
             </div>
-            <div className={styles.bottom}>
-              <p>{article.price}</p>
-              <p>{date?.toLocaleTimeString()} | {date?.toDateString()}</p>
+            <div>
+              <p className={styles.price}>{article.price}</p>
+              <p className={styles.dateBottom}>{date?.toLocaleTimeString()} | {date?.toDateString()}</p>
             </div>
           </div>
-          <div className={styles.right}>
-            <button>Sign up to this event</button>
+          <div>
+            <button className={styles.signUpButton}>Sign up to this event</button>
           </div>
         </div>
         <div className={styles.content}>
