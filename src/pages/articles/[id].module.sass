@@ -2,17 +2,21 @@
   width: 100%
   max-width: 1000px
   height: 400px
+  max-height: 50vw
   border-radius: 5px
   background-size: cover
   background-position: center
 
 .title
-  font-size: 58px
+  font-size: 42px
   color: #FF6600
   text-align: center
   max-width: 700px
   margin: 0 auto
   padding: 55px 0 10px 0
+
+  @media (min-width: 800px)
+    font-size: 58px
 
 .description
   color: #850000
@@ -35,6 +39,9 @@
   justify-content: space-between
   align-items: center
   padding: 20px 0
+
+  @media (max-width: 799px)
+    display: none
 
 .location
   font-size: 18px
@@ -78,6 +85,9 @@
   margin: 0 auto
   width: 100%
   max-width: 650px
+
+  @media (max-width: 799px)
+    padding: 0 0 50px 0
 
   h1, h2, h3
     color: #FF6600
